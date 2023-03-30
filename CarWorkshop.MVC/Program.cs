@@ -1,14 +1,22 @@
 using CarWorkshop.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
+using CarWorkshop.Infrastructure.Extension;
+using CarWorkshop.Infrastructure.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<CarWorkshopDbContext>(opt => opt.UseSqlServer(
-    builder.Configuration.GetConnectionString("CS")).LogTo(Console.Write));
-builder.Services.
+builder.Services.AddInfrastructure(builder.Configuration);
+
+
+
 var app = builder.Build();
+
+
+var scope = app.Services.CreateScope();
+var seeder = scope.ServiceProvider.GetRequiredService<CarWorkshopSeeder>();
+await seeder.Seed();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

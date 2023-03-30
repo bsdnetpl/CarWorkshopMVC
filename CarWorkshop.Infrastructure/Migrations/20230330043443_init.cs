@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace CarWorkshop.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,6 +23,7 @@ namespace CarWorkshop.Infrastructure.Migrations
                     ContactDetails_PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ContactDetails_Street = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ContactDetails_City = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContactDetails_Postalcode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     EncodedName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
