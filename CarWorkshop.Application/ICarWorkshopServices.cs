@@ -1,5 +1,5 @@
 ﻿namespace CarWarkshop.Application {
     public interface ICarWorkshopServices {
-        Task Create(CarWarkshop.Domain.Entities.CarWorkshop carWorkshop);
+        Task Create(CarWorkshop.Domain.Entities.CarWorkshop carWorkshop);
     }
 }

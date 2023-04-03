@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CarWarkshop.Application\CarWorkshop.Application.csproj" />
+    <ProjectReference Include="..\CarWorkshop.Application\CarWorkshop.Application.csproj" />
   </ItemGroup>
 
 </Project>
