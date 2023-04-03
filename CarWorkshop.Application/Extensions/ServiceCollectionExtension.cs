@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWarkshop.Application.Extensions 
+namespace CarWorkshop.Application.Extensions 
 {
     public static class ServiceCollectionExtension 
     {
