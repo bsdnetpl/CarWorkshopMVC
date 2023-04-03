@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 namespace CarWorkshop.MVC.Controllers {
     public class CarWorkshopController : Controller 
     {
-        private readonly ICarWporkshopServices _carWporkshopServices;
+        private readonly ICarWorkshopServices _carWporkshopServices;
 
-        public CarWorkshopController( ICarWporkshopServices carWporkshopServices)
+        public CarWorkshopController( ICarWorkshopServices carWporkshopServices)
         {
             _carWporkshopServices = carWporkshopServices;
         }

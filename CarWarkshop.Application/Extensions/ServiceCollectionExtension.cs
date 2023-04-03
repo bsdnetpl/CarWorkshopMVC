@@ -11,7 +11,7 @@ namespace CarWarkshop.Application.Extensions
     {
         public static void AddApplication(this IServiceCollection services) 
         {
-            services.AddScoped<ICarWporkshopServices, CarWporkshopServices>();
+            services.AddScoped<ICarWorkshopServices, CarWorkshopServices>();
         }
 
     }
