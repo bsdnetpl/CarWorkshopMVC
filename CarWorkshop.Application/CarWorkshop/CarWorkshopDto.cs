@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace CarWorkshop.Application.CarWorkshop {
     public class CarWorkshopDto {
+        [Required]
         public string Name { get; set; } = default;
         public string? Description { get; set; }
         public string EncodedName { get; set; } 
