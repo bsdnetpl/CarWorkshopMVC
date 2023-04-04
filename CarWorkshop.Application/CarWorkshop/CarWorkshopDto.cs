@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace CarWorkshop.Application.CarWorkshop {
     public class CarWorkshopDto {
-        [Required]
         public string Name { get; set; } = default;
         public string? Description { get; set; }
         public string EncodedName { get; set; } 
