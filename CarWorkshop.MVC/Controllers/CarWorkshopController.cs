@@ -1,8 +1,9 @@
-﻿using CarWarkshop.Application;
-using CarWorkshop.Application;
+﻿using CarWorkshop.Application.CarWorkshop;
+using CarWorkshop.Application.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CarWorkshop.MVC.Controllers {
+namespace CarWorkshop.MVC.Controllers
+{
     public class CarWorkshopController : Controller 
     {
         private readonly ICarWorkshopServices _carWporkshopServices;
@@ -17,9 +18,9 @@ namespace CarWorkshop.MVC.Controllers {
         }
 
         [HttpPost]
-        public async  Task<IActionResult> Create(Domain.Entities.CarWorkshop carWorkshop) 
+        public async  Task<IActionResult> Create(CarWorkshopDto carWorkshopDto) 
         {
-           await _carWporkshopServices.Create(carWorkshop);
+           await _carWporkshopServices.Create(carWorkshopDto);
             return RedirectToAction(nameof(Create)); // todo refactor
         }
     }

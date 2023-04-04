@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CarWarkshop.Application.CarWorkshop {
-    internal class CarWorkshopDto {
+namespace CarWorkshop.Application.CarWorkshop {
+    public class CarWorkshopDto {
         public string Name { get; set; } = default;
         public string? Description { get; set; }
         public string EncodedName { get; set; } 
