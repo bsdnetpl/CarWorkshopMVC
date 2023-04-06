@@ -25,5 +25,13 @@ namespace CarWorkshop.Application.Services
             carWorkshop.EncodeName();
             await _carWorkshop.Create(carWorkshop);
         }
+
+        public async Task<IEnumerable<CarWorkshopDto>> GetAll()
+        {
+            var CarWorkshop = await _carWorkshop.GetAll();
+            var dtos = _mapper.Map<IEnumerable<CarWorkshopDto>>(CarWorkshop);
+            return dtos;
+
+        }
     }
 }
